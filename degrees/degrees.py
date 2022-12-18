@@ -93,7 +93,8 @@ def shortest_path(source, target):
     """
 
     # TODO
-    raise NotImplementedError
+    #raise NotImplementedError
+    print(source,target)
 
 
 def person_id_for_name(name):
