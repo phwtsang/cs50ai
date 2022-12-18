@@ -96,6 +96,7 @@ def shortest_path(source, target):
     #raise NotImplementedError
     print(source,target)
     print(people['129'])
+    print(movies['104257'])
 
 
 def person_id_for_name(name):
