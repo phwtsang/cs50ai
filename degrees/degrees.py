@@ -96,9 +96,9 @@ def shortest_path(source, target):
     #raise NotImplementedError
     print(source,target)
     print(neighbors_for_person(source))
-    print(people)
-    print(movies)
-    print(names)
+    #print(people)
+    #print(movies)
+    #print(names)
 
 
 def person_id_for_name(name):
