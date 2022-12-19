@@ -95,14 +95,14 @@ def shortest_path(source, target):
     # TODO
     #raise NotImplementedError
     print(source,target)
-    print(neighbors_for_person(source))
     #print(people)
     #print(movies)
     #print(names)
     start = Node(source,None,None)
     frontier = QueueFrontier()
     frontier.add(start)
-    print(frontier)
+    print(frontier[0])
+    print(neighbors_for_person(source))
     for item in neighbors_for_person(source):
         print(item[1])
 
