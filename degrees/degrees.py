@@ -94,7 +94,7 @@ def shortest_path(source, target):
 
     # TODO
     #raise NotImplementedError
-    print(source,target)
+    print(person_id_for_name(source),person_id_for_name(target))
     print(people)
     print(movies)
     print(names)
