@@ -99,6 +99,10 @@ def shortest_path(source, target):
     #print(people)
     #print(movies)
     #print(names)
+    start = Node(source,None,None)
+    frontier = QueueFrontier()
+    frontier.add(start)
+    print(frontier)
     for item in neighbors_for_person(source):
         print(item[1])
 
