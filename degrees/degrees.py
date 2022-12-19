@@ -101,7 +101,7 @@ def shortest_path(source, target):
     start = Node(source,None,None)
     frontier = QueueFrontier()
     frontier.add(start)
-    print(frontier[0])
+    print(frontier.frontier[0])
     print(neighbors_for_person(source))
     for item in neighbors_for_person(source):
         print(item[1])
