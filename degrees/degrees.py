@@ -97,6 +97,7 @@ def shortest_path(source, target):
     print(source,target)
     print(people)
     print(movies)
+    print(names)
 
 
 def person_id_for_name(name):
