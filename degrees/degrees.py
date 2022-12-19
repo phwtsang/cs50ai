@@ -104,15 +104,15 @@ def shortest_path(source, target):
     frontier.add(start)
     print(frontier.frontier[0].state)
 
-    while True:
+    for i in range(1):
 
         if frontier.empty():
             raise Exception('no solution')
 
         node = frontier.remove()
-        degrees = += 1
-        print(neighbors_for_person(source))
-        for item in neighbors_for_person(source):
+        degrees += 1
+        print(neighbors_for_person(node))
+        for item in neighbors_for_person(node):
             print(item[1])
 
 
