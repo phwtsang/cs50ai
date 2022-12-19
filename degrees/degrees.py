@@ -98,13 +98,22 @@ def shortest_path(source, target):
     #print(people)
     #print(movies)
     #print(names)
+    degrees = 0
     start = Node(source,None,None)
     frontier = QueueFrontier()
     frontier.add(start)
     print(frontier.frontier[0].state)
-    print(neighbors_for_person(source))
-    for item in neighbors_for_person(source):
-        print(item[1])
+
+    while True:
+
+        if frontier.empty():
+            raise Exception('no solution')
+
+        node = frontier.remove()
+        degrees = += 1
+        print(neighbors_for_person(source))
+        for item in neighbors_for_person(source):
+            print(item[1])
 
 
 def person_id_for_name(name):
