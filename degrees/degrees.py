@@ -99,17 +99,21 @@ def shortest_path(source, target):
     #print(movies)
     #print(names)
     degrees = 0
+    explored = set()
     start = Node(source,None,None)
     frontier = QueueFrontier()
     frontier.add(start)
     print(frontier.frontier[0].state)
 
-    for i in range(1):
+    for i in range(2):
+
+        print(i,degrees)
 
         if frontier.empty():
             raise Exception('no solution')
 
         node = frontier.remove()
+        print(node.state)
         degrees += 1
         print(node.state == target)
         print(neighbors_for_person(node.state))
