@@ -107,13 +107,11 @@ def shortest_path(source, target):
     i=0
     while True:
 
-        print(i)
-
         if frontier.empty():
             raise Exception('no solution')
 
         node = frontier.remove()
-        print(node.state)
+        print(i,node.state)
         degrees += 1
 
         if node.state == target:
