@@ -129,7 +129,7 @@ def shortest_path(source, target):
             actions.reverse()
             cells.reverse()
             for j in range(len(actions)):
-                solution.append(actions[j],cells[j])
+                solution.append((actions[j],cells[j]))
             return (solution)
 
         explored.add(node.state)
