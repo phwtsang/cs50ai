@@ -128,7 +128,7 @@ def shortest_path(source, target):
             actions.reverse()
             cells.reverse()
             return (actions,cells)
-            
+                      
         explored.add(node.state)
         for action,state in neighbors_for_person(node.state):
             if not frontier.contains_state(state) and state not in explored:
