@@ -94,7 +94,7 @@ def shortest_path(source, target):
 
     # TODO
     #raise NotImplementedError
-    print(source,target)
+    #print(source,target)
     #print(people)
     #print(movies)
     #print(names)
@@ -103,7 +103,7 @@ def shortest_path(source, target):
     start = Node(source,None,None)
     frontier = QueueFrontier()
     frontier.add(start)
-    print(frontier.frontier[0].state)
+    #print(frontier.frontier[0].state)
 
     for i in range(3):
 
@@ -119,9 +119,9 @@ def shortest_path(source, target):
         print(neighbors_for_person(node.state))
         explored.add(node.state)
         for action,state in neighbors_for_person(node.state):
-            child = Node(state,node,action)
-            frontier.add(child)
-
+            if not frontier.contains_state(state) and state not in explored:
+                child = Node(state,node,action)
+                frontier.add(child)              
 
 def person_id_for_name(name):
     """
