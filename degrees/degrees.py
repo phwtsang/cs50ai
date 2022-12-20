@@ -104,10 +104,10 @@ def shortest_path(source, target):
     frontier = QueueFrontier()
     frontier.add(start)
     #print(frontier.frontier[0].state)
+    i=0
+    while True:
 
-    for i in range(8):
-
-        print(i,degrees)
+        print(i)
 
         if frontier.empty():
             raise Exception('no solution')
@@ -130,13 +130,14 @@ def shortest_path(source, target):
             cells.reverse()
             for j in range(len(actions)):
                 solution.append((actions[j],cells[j]))
-            return (solution)
+            return solution
 
         explored.add(node.state)
         for action,state in neighbors_for_person(node.state):
             if not frontier.contains_state(state) and state not in explored:
                 child = Node(state,node,action)
-                frontier.add(child)            
+                frontier.add(child)
+        i +=1          
 
 def person_id_for_name(name):
     """
