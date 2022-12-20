@@ -105,7 +105,7 @@ def shortest_path(source, target):
     frontier.add(start)
     print(frontier.frontier[0].state)
 
-    for i in range(2):
+    for i in range(3):
 
         print(i,degrees)
 
@@ -117,6 +117,7 @@ def shortest_path(source, target):
         degrees += 1
         print(node.state == target)
         print(neighbors_for_person(node.state))
+        explored.add(node.state)
         for action,state in neighbors_for_person(node.state):
             child = Node(state,node,action)
             frontier.add(child)
