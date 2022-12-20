@@ -105,7 +105,7 @@ def shortest_path(source, target):
     frontier.add(start)
     #print(frontier.frontier[0].state)
 
-    for i in range(5):
+    for i in range(8):
 
         print(i,degrees)
 
