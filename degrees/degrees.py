@@ -121,14 +121,17 @@ def shortest_path(source, target):
             #print(neighbors_for_person(node.state))
             actions = []
             cells = []
+            solution = []
             while node.parent is not None:
                 actions.append(node.action)
                 cells.append(node.state)
                 node = node.parent
             actions.reverse()
             cells.reverse()
-            return (actions,cells)
-                      
+            for j in range(len(actions)):
+                solution.append(actions[j],cells[j])
+            return (solution)
+
         explored.add(node.state)
         for action,state in neighbors_for_person(node.state):
             if not frontier.contains_state(state) and state not in explored:
